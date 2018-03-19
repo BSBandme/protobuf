@@ -1,0 +1,779 @@
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 20
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 500ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE2], dataFile=[./datasets/google_message2/dataset.google_message2.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE2, dataFile=./datasets/google_message2/dataset.google_message2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=195584.62, 1st qu.=196430.61, median=196993.11, mean=202913.65, 3rd qu.=200832.99, max=242515.99
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE2, dataFile=./datasets/google_message2/dataset.google_message2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=195206.79, 1st qu.=198910.35, median=199584.58, mean=201576.56, 3rd qu.=201730.39, max=221474.38
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE2, dataFile=./datasets/google_message2/dataset.google_message2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+  Results:
+    runtime(ns): min=225906.60, 1st qu.=226654.79, median=229247.18, mean=230344.76, 3rd qu.=233228.71, max=240871.89
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE2, dataFile=./datasets/google_message2/dataset.google_message2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+  Results:
+    runtime(ns): min=78981.22, 1st qu.=79820.56, median=80267.66, mean=81739.03, 3rd qu.=81215.27, max=95178.93
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE2, dataFile=./datasets/google_message2/dataset.google_message2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+  Results:
+    runtime(ns): min=81380.95, 1st qu.=82440.05, median=82651.31, mean=82669.24, 3rd qu.=82940.62, max=83977.59
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE2, dataFile=./datasets/google_message2/dataset.google_message2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=101855.59, 1st qu.=102449.53, median=104030.72, mean=105879.83, 3rd qu.=106636.44, max=122303.43
+Collected 120 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+
+Execution complete: 2.168 min.
+Results have been uploaded. View them at: https://microbenchmarks.appspot.com/runs/2629da5c-fc69-4ca7-8f94-89fb0cf173c1
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 20
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 500ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE1_PROTO2], dataFile=[./datasets/google_message1/dataset.google_message1_proto2.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO2, dataFile=./datasets/google_message1/dataset.google_message1_proto2.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=527.66, 1st qu.=530.05, median=531.45, mean=535.92, 3rd qu.=533.75, max=577.71
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO2, dataFile=./datasets/google_message1/dataset.google_message1_proto2.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=528.65, 1st qu.=533.49, median=535.06, mean=535.29, 3rd qu.=537.09, max=542.29
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO2, dataFile=./datasets/google_message1/dataset.google_message1_proto2.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=895.33, 1st qu.=899.59, median=903.33, mean=908.30, 3rd qu.=916.33, max=935.83
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO2, dataFile=./datasets/google_message1/dataset.google_message1_proto2.pb}}
+  Results:
+    runtime(ns): min=191.43, 1st qu.=193.59, median=194.82, mean=197.19, 3rd qu.=200.26, max=214.57
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO2, dataFile=./datasets/google_message1/dataset.google_message1_proto2.pb}}
+  Results:
+    runtime(ns): min=188.45, 1st qu.=191.13, median=192.77, mean=196.02, 3rd qu.=197.65, max=218.35
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO2, dataFile=./datasets/google_message1/dataset.google_message1_proto2.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=291.29, 1st qu.=294.68, median=297.23, mean=300.55, 3rd qu.=300.03, max=338.95
+Collected 120 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+
+Execution complete: 2.143 min.
+Results have been uploaded. View them at: https://microbenchmarks.appspot.com/runs/61116bfd-b90d-4d9f-91fe-2e1bb94e1b7c
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 20
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 500ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE1_PROTO3], dataFile=[./datasets/google_message1/dataset.google_message1_proto3.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO3, dataFile=./datasets/google_message1/dataset.google_message1_proto3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=623.47, 1st qu.=625.18, median=628.95, mean=637.59, 3rd qu.=650.14, max=681.90
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO3, dataFile=./datasets/google_message1/dataset.google_message1_proto3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=575.21, 1st qu.=583.69, median=587.11, mean=602.27, 3rd qu.=605.35, max=754.10
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO3, dataFile=./datasets/google_message1/dataset.google_message1_proto3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=1012.21, 1st qu.=1023.09, median=1028.36, mean=1028.53, 3rd qu.=1032.39, max=1059.21
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO3, dataFile=./datasets/google_message1/dataset.google_message1_proto3.pb}}
+  Results:
+    runtime(ns): min=190.84, 1st qu.=192.44, median=193.09, mean=192.99, 3rd qu.=193.29, max=197.21
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO3, dataFile=./datasets/google_message1/dataset.google_message1_proto3.pb}}
+  Results:
+    runtime(ns): min=190.06, 1st qu.=191.33, median=192.43, mean=206.50, 3rd qu.=195.14, max=331.74
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE1_PROTO3, dataFile=./datasets/google_message1/dataset.google_message1_proto3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=279.63, 1st qu.=280.93, median=283.20, mean=284.17, 3rd qu.=284.18, max=316.34
+Collected 120 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+
+Execution complete: 2.133 min.
+Results have been uploaded. View them at: https://microbenchmarks.appspot.com/runs/ecffb138-c6b8-46af-819f-1da22cea0e40
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 20
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 1500ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE4], dataFile=[./dataset.google_message4.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE4, dataFile=./dataset.google_message4.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (39ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 39μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=29459.01, 1st qu.=29916.71, median=30360.06, mean=30825.48, 3rd qu.=31889.73, max=32817.29
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE4, dataFile=./dataset.google_message4.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (39ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 39μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=29364.01, 1st qu.=31177.61, median=31658.97, mean=31720.12, 3rd qu.=32343.98, max=35412.97
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE4, dataFile=./dataset.google_message4.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (39ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 39μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=32471.40, 1st qu.=33566.77, median=34273.08, mean=35213.05, 3rd qu.=36275.39, max=46202.69
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE4, dataFile=./dataset.google_message4.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (39ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 39μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=23636.79, 1st qu.=23817.66, median=23970.28, mean=24053.43, 3rd qu.=24353.23, max=24583.36
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE4, dataFile=./dataset.google_message4.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (39ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 39μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=23665.20, 1st qu.=23944.79, median=24039.88, mean=24246.93, 3rd qu.=24468.16, max=26374.94
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE4, dataFile=./dataset.google_message4.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (39ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 39μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=25648.26, 1st qu.=25967.09, median=26532.13, mean=26584.78, 3rd qu.=26920.65, max=28475.23
+Collected 120 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+
+Execution complete: 4.461 min.
+Results have been uploaded. View them at: https://microbenchmarks.appspot.com/runs/18c39171-f529-47ab-bce4-43071361f90a
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 20
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 3000ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE3], dataFile=[./dataset.google_message3_4.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_4.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=2687.96, 1st qu.=2710.26, median=2724.04, mean=2730.56, 3rd qu.=2742.45, max=2813.06
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_4.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=2655.61, 1st qu.=2665.08, median=2687.89, mean=2697.00, 3rd qu.=2734.95, max=2773.54
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_4.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=3313.80, 1st qu.=3339.34, median=3375.99, mean=3411.69, 3rd qu.=3477.50, max=3723.61
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_4.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=2625.49, 1st qu.=2663.29, median=2674.54, mean=2681.21, 3rd qu.=2688.56, max=2773.16
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_4.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=2623.36, 1st qu.=2641.74, median=2652.36, mean=2657.28, 3rd qu.=2668.71, max=2703.19
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_4.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=6405.96, 1st qu.=6422.05, median=6443.64, mean=6458.08, 3rd qu.=6476.19, max=6604.73
+Collected 120 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+
+Execution complete: 7.493 min.
+Results have been uploaded. View them at: https://microbenchmarks.appspot.com/runs/9459465b-e8c1-41ee-aebd-cd41fc8e7541
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 20
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 3000ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE3], dataFile=[./dataset.google_message3_3.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=257.97, 1st qu.=260.66, median=271.91, mean=269.69, 3rd qu.=273.98, max=281.02
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=240.33, 1st qu.=243.64, median=244.54, mean=247.16, 3rd qu.=249.71, max=265.35
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=678.20, 1st qu.=685.74, median=691.47, mean=700.42, 3rd qu.=713.73, max=794.42
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=124.21, 1st qu.=125.29, median=126.84, mean=126.95, 3rd qu.=128.12, max=131.34
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=127.95, 1st qu.=129.12, median=129.54, mean=129.76, 3rd qu.=130.02, max=135.36
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_3.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=211.68, 1st qu.=213.38, median=215.13, mean=217.24, 3rd qu.=220.03, max=227.48
+Collected 120 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+
+Execution complete: 7.744 min.
+Results have been uploaded. View them at: https://microbenchmarks.appspot.com/runs/95671bc1-55f7-401d-aa3e-a2df10d33bdf
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 20
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 3000ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE3], dataFile=[./dataset.google_message3_5.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=156.72, 1st qu.=159.44, median=160.49, mean=160.79, 3rd qu.=161.50, max=169.93
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=148.17, 1st qu.=149.86, median=150.89, mean=151.17, 3rd qu.=152.49, max=155.12
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=565.26, 1st qu.=567.16, median=569.41, mean=571.20, 3rd qu.=573.67, max=588.28
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=72.54, 1st qu.=72.97, median=73.31, mean=73.35, 3rd qu.=73.60, max=74.72
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=70.27, 1st qu.=70.52, median=70.68, mean=70.91, 3rd qu.=71.03, max=74.32
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=96.96, 1st qu.=97.21, median=97.61, mean=97.90, 3rd qu.=97.90, max=102.32
+Collected 120 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+
+Execution complete: 10.34 min.
+Results have been uploaded. View them at: https://microbenchmarks.appspot.com/runs/4928a3e7-c785-413c-9bda-c13a01d3772b
+WARNING: This benchmark's whole iterations are not enough, consider to config caliper to run for more time to make the result more convincing. e.g. try to run "./java-benchmark ./dataset.google_message3_5.pb -- -Cinstrument.runtime.options.timingInterval=9105ms" or try to run "./java-benchmark ./dataset.google_message3_5.pb -- -Cinstrument.runtime.options.measurements=60" again.
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 20
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 3000ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE3], dataFile=[./dataset.google_message3_2.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (40ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 40μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=220604.13, 1st qu.=227151.08, median=229993.74, mean=231783.98, 3rd qu.=235975.41, max=256233.14
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (40ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 40μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=215473.96, 1st qu.=218849.57, median=221042.01, mean=222887.18, 3rd qu.=224506.40, max=240416.15
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (40ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 40μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=257092.24, 1st qu.=262719.02, median=268698.97, mean=268252.74, 3rd qu.=269310.64, max=285757.43
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (40ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 40μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=165055.46, 1st qu.=165814.69, median=166480.82, mean=166699.23, 3rd qu.=167428.90, max=168789.94
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (40ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 40μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=164478.14, 1st qu.=172446.39, median=173315.87, mean=171985.49, 3rd qu.=174175.25, max=175863.45
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_2.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (40ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 40μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=223280.73, 1st qu.=225181.60, median=226711.05, mean=229468.42, 3rd qu.=234785.25, max=241616.42
+Collected 120 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+
+Execution complete: 7.191 min.
+Results have been uploaded. View them at: https://microbenchmarks.appspot.com/runs/7c5b76a2-e066-46b2-8e8b-60ac03093438
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 60
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 3000ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE3], dataFile=[./dataset.google_message3_5.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=170.04, 1st qu.=171.26, median=172.22, mean=173.33, 3rd qu.=173.68, max=207.73
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=154.52, 1st qu.=156.03, median=156.96, mean=157.90, 3rd qu.=158.97, max=167.07
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=559.79, 1st qu.=563.35, median=566.93, mean=568.25, 3rd qu.=571.36, max=606.05
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=72.94, 1st qu.=73.52, median=73.83, mean=74.06, 3rd qu.=74.22, max=85.54
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=79.82, 1st qu.=80.56, median=80.75, mean=80.95, 3rd qu.=81.26, max=83.65
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_5.pb}}
+  Messages:
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=99.90, 1st qu.=100.98, median=101.28, mean=101.66, 3rd qu.=102.01, max=108.56
+Collected 360 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+Configuration:
+  instrument.allocation.class = com.google.caliper.runner.AllocationInstrument
+  instrument.allocation.options.trackAllocations = false
+  instrument.arbitrary.class = com.google.caliper.runner.ArbitraryMeasurementInstrument
+  instrument.arbitrary.options.gcBeforeEach = false
+  instrument.runtime.class = com.google.caliper.runner.RuntimeInstrument
+  instrument.runtime.options.gcBeforeEach = true
+  instrument.runtime.options.maxWarmupWallTime = 10m
+  instrument.runtime.options.measurements = 20
+  instrument.runtime.options.suggestGranularity = true
+  instrument.runtime.options.timingInterval = 3000ms
+  instrument.runtime.options.warmup = 10s
+  results.file.class = com.google.caliper.runner.OutputFileDumper
+  results.upload.class = com.google.caliper.runner.HttpUploader
+  results.upload.options.url = https://microbenchmarks.appspot.com/
+  runner.maxParallelism = 2
+  vm.args = -Xmx3g -Xms3g
+  vm.baseDirectory = /usr/local/buildtools/java
+  vm.jdk-32-client.args = -d32 -client
+  vm.jdk-32-client.home = jdk-32
+  vm.jdk-32-server.args = -d32 -server
+  vm.jdk-32-server.home = jdk-32
+  vm.jdk-64-compressed.args = -d64 -XX:+UseCompressedOops
+  vm.jdk-64-compressed.home = jdk-64
+  vm.jdk-64-uncompressed.args = -d64 -XX:-UseCompressedOops
+  vm.jdk-64-uncompressed.home = jdk-64
+Experiment selection: 
+  Benchmark Methods:   [deserializeFromByteArray, deserializeFromByteString, deserializeFromMemoryStream, serializeToByteArray, serializeToByteString, serializeToMemoryStream]
+  Instruments:   [runtime]
+  User parameters:   {benchmarkMessageType=[GOOGLE_MESSAGE3], dataFile=[./dataset.google_message3_1.pb]}
+  Virtual machines:  [default]
+  Selection type:    Full cartesian product
+
+This selection yields 6 experiments.
+Trial Report (1 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_1.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=255901690.33, 1st qu.=262504141.12, median=306613660.67, mean=293124167.80, 3rd qu.=315480439.13, max=335983315.00
+Trial Report (2 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_1.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=226990175.33, 1st qu.=255317134.49, median=286702444.89, mean=284707340.06, 3rd qu.=314956057.78, max=340607468.25
+Trial Report (3 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=deserializeFromMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_1.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=254229151.33, 1st qu.=283806156.55, median=309062245.70, mean=309220443.33, 3rd qu.=339446313.59, max=349891581.00
+Trial Report (4 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteArray, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_1.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=181065603.27, 1st qu.=181660092.90, median=185416591.44, mean=202287972.16, 3rd qu.=228439375.13, max=253617964.82
+Trial Report (5 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToByteString, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_1.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=206462902.30, 1st qu.=224817306.80, median=230751998.51, mean=233128140.57, 3rd qu.=244872610.79, max=266057563.09
+Trial Report (6 of 6):
+  Experiment {instrument=runtime, benchmarkMethod=serializeToMemoryStream, vm=default, parameters={benchmarkMessageType=GOOGLE_MESSAGE3, dataFile=./dataset.google_message3_1.pb}}
+  Messages:
+    INFO: This experiment does not require a microbenchmark. The granularity of the timer (44ns) is less than 0.1% of the measured runtime. If all experiments for this benchmark have runtimes greater than 44μs, consider the macrobenchmark instrument.
+    ERROR: GC occurred during timing. Measurements were discarded.
+  Results:
+    runtime(ns): min=296116523.00, 1st qu.=299933501.21, median=301872726.50, mean=302570211.60, 3rd qu.=304802980.33, max=313826876.30
+Collected 120 measurements from:
+  1 instrument(s)
+  1 virtual machine(s)
+  6 benchmark(s)
+  

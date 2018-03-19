@@ -1,0 +1,18 @@
+goos: darwin
+goarch: amd64
+Benchmark/./datasets/google_message1/proto2/dataset.google_message1_proto2.pb/Unmarshal-4         	 1000000	      1228 ns/op
+Benchmark/./datasets/google_message1/proto2/dataset.google_message1_proto2.pb/Marshal-4           	 1000000	      1472 ns/op
+Benchmark/./datasets/google_message1/proto2/dataset.google_message1_proto2.pb/Size-4              	 3000000	       415 ns/op
+Benchmark/./datasets/google_message1/proto2/dataset.google_message1_proto2.pb/Clone-4             	  200000	      7780 ns/op
+Benchmark/./datasets/google_message1/proto2/dataset.google_message1_proto2.pb/Merge-4             	  200000	      7687 ns/op
+Benchmark/./datasets/google_message1/proto3/dataset.google_message1_proto3.pb/Unmarshal-4         	 2000000	       882 ns/op
+Benchmark/./datasets/google_message1/proto3/dataset.google_message1_proto3.pb/Marshal-4           	 1000000	      1267 ns/op
+Benchmark/./datasets/google_message1/proto3/dataset.google_message1_proto3.pb/Size-4              	 3000000	       404 ns/op
+Benchmark/./datasets/google_message1/proto3/dataset.google_message1_proto3.pb/Clone-4             	  200000	      6317 ns/op
+Benchmark/./datasets/google_message1/proto3/dataset.google_message1_proto3.pb/Merge-4             	  200000	      6274 ns/op
+Benchmark/./datasets/google_message2/dataset.google_message2.pb/Unmarshal-4                       	    3000	    511423 ns/op
+Benchmark/./datasets/google_message2/dataset.google_message2.pb/Marshal-4                         	    3000	    489830 ns/op
+Benchmark/./datasets/google_message2/dataset.google_message2.pb/Size-4                            	   10000	    167329 ns/op
+Benchmark/./datasets/google_message2/dataset.google_message2.pb/Clone-4                           	     300	   3916282 ns/op
+Benchmark/./datasets/google_message2/dataset.google_message2.pb/Merge-4                           	     300	   3895102 ns/op
+PASS

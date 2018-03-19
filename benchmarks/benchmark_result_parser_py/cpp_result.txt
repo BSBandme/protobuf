@@ -1,0 +1,41 @@
+Benchmarking blaze-out/k8-opt/bin/third_party   /protobuf/testing/cpp_internal_benchmark
+Run on yilunchong.bej (6 X 2300 MHz CPUs); 2018-03-12T12:02:20.126063014+08:00
+CPU: Intel Haswell (6 cores) dL1:32KB dL2:256KB dL3:45MB
+Benchmark                                  Time(ns)        CPU(ns)     Iterations
+---------------------------------------------------------------------------------
+BM_google_message1_proto2_parse_new             339            332        2124416 654.767MB/s
+BM_google_message1_proto2_parse_reuse           202            192        2867046 1.106GB/s
+BM_google_message1_proto2_parse_newarena        316            312        2272341 696.912MB/s
+BM_google_message1_proto2_serialize              99.4           98.7      7087697 2.151GB/s
+BM_google_message1_proto3_parse_new             452            449        1558719 484.316MB/s
+BM_google_message1_proto3_parse_reuse           354            353        1974970 616.643MB/s
+BM_google_message1_proto3_parse_newarena        567            534        1000000 407.246MB/s
+BM_google_message1_proto3_serialize             221            211        3310345 997.851MB/s
+BM_google_message2_parse_new                 180488         177322           3968 454.835MB/s
+BM_google_message2_parse_reuse               111800         109671           6481 735.402MB/s
+BM_google_message2_parse_newarena            115892         113314           6206 711.758MB/s
+BM_google_message2_serialize                  59803          58572          10000 1.345GB/s
+BM_google_message3_1_parse_new            581309660      573665809              1 333.428MB/s
+BM_google_message3_1_parse_reuse          283047012      280328072              2 682.330MB/s
+BM_google_message3_1_parse_newarena       336084395      333055733              3 574.307MB/s
+BM_google_message3_1_serialize            136885436      135934372              5 1.374GB/s
+BM_google_message3_2_parse_new               380610         376821           1888 933.570MB/s
+BM_google_message3_2_parse_reuse             293366         291499           2386 1.171GB/s
+BM_google_message3_2_parse_newarena          231337         229807           2944 1.482GB/s
+BM_google_message3_2_serialize               146619         145744           4806 2.346GB/s
+BM_google_message3_3_parse_new                  233            227        3559996 316.377MB/s
+BM_google_message3_3_parse_reuse                117            113        6781615 634.982MB/s
+BM_google_message3_3_parse_newarena             195            193        3544797 373.103MB/s
+BM_google_message3_3_serialize                   83.8           83.0      8448610 865.764MB/s
+BM_google_message3_4_parse_new                 1730           1715         328707 8.779GB/s
+BM_google_message3_4_parse_reuse               1231           1221         580019 12.323GB/s
+BM_google_message3_4_parse_newarena            1772           1754         398654 8.580GB/s
+BM_google_message3_4_serialize                 1310           1298         538266 11.594GB/s
+BM_google_message3_5_parse_new                  108            108        6571348 185.684MB/s
+BM_google_message3_5_parse_reuse                 59.1           58.9     10000000 339.496MB/s
+BM_google_message3_5_parse_newarena             141            141        4977066 141.946MB/s
+BM_google_message3_5_serialize                   43.3           43.2     16120633 462.724MB/s
+BM_google_message4_parse_new                  35854          35759          20354 498.429MB/s
+BM_google_message4_parse_reuse                30915          30447          17875 575.905MB/s
+BM_google_message4_parse_newarena             24323          23948          33158 742.714MB/s
+BM_google_message4_serialize                  11622          11472          56757 1.517GB/s

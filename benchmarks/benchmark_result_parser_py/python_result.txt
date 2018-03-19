@@ -1,0 +1,108 @@
+./python-cpp-generated-code-benchmark `find . -type f -name "dataset.*.pb"`
+Message benchmarks.proto2.GoogleMessage2 of dataset file ./datasets/google_message2/dataset.google_message2.pb
+Average time for parse_from_benchmark: 350244.42 ns
+Average time for serialize_to_benchmark: 84845.36 ns
+
+Message benchmarks.proto2.GoogleMessage1 of dataset file ./datasets/google_message1/dataset.google_message1_proto2.pb
+Average time for parse_from_benchmark: 2752.58 ns
+Average time for serialize_to_benchmark: 873.86 ns
+
+Message benchmarks.proto3.GoogleMessage1 of dataset file ./datasets/google_message1/dataset.google_message1_proto3.pb
+Average time for parse_from_benchmark: 2778.80 ns
+Average time for serialize_to_benchmark: 952.38 ns
+
+Message benchmarks.google_message4.GoogleMessage4 of dataset file ./dataset.google_message4.pb
+Average time for parse_from_benchmark: 61160.79 ns
+Average time for serialize_to_benchmark: 12196.89 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_4.pb
+Average time for parse_from_benchmark: 6322.46 ns
+Average time for serialize_to_benchmark: 2664.17 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_3.pb
+Average time for parse_from_benchmark: 2336.50 ns
+Average time for serialize_to_benchmark: 607.75 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_5.pb
+Average time for parse_from_benchmark: 2018.00 ns
+Average time for serialize_to_benchmark: 566.58 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_2.pb
+Average time for parse_from_benchmark: 638780.84 ns
+Average time for serialize_to_benchmark: 149402.33 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_1.pb
+Average time for parse_from_benchmark: 959490716.46 ns
+Average time for serialize_to_benchmark: 131785828.13 ns
+./python-cpp-reflection-benchmark `find . -type f -name "dataset.*.pb"`
+Message benchmarks.proto2.GoogleMessage2 of dataset file ./datasets/google_message2/dataset.google_message2.pb
+Average time for parse_from_benchmark: 1181602.18 ns
+Average time for serialize_to_benchmark: 1459106.79 ns
+
+Message benchmarks.proto2.GoogleMessage1 of dataset file ./datasets/google_message1/dataset.google_message1_proto2.pb
+Average time for parse_from_benchmark: 4782.25 ns
+Average time for serialize_to_benchmark: 3898.67 ns
+
+Message benchmarks.proto3.GoogleMessage1 of dataset file ./datasets/google_message1/dataset.google_message1_proto3.pb
+Average time for parse_from_benchmark: 5707.60 ns
+Average time for serialize_to_benchmark: 6778.93 ns
+
+Message benchmarks.google_message4.GoogleMessage4 of dataset file ./dataset.google_message4.pb
+Average time for parse_from_benchmark: 106885.81 ns
+Average time for serialize_to_benchmark: 91105.98 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_4.pb
+Average time for parse_from_benchmark: 6703.49 ns
+Average time for serialize_to_benchmark: 3888.95 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_3.pb
+Average time for parse_from_benchmark: 2882.11 ns
+Average time for serialize_to_benchmark: 2099.22 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_5.pb
+Average time for parse_from_benchmark: 2371.49 ns
+Average time for serialize_to_benchmark: 1716.43 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_2.pb
+Average time for parse_from_benchmark: 1166147.40 ns
+Average time for serialize_to_benchmark: 1121728.54 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_1.pb
+Average time for parse_from_benchmark: 1408918062.85 ns
+Average time for serialize_to_benchmark: 476083142.42 ns
+./python-pure-python-benchmark `find . -type f -name "dataset.*.pb"`
+Message benchmarks.proto2.GoogleMessage2 of dataset file ./datasets/google_message2/dataset.google_message2.pb
+Average time for parse_from_benchmark: 30917063.36 ns
+Average time for serialize_to_benchmark: 20664825.67 ns
+
+Message benchmarks.proto2.GoogleMessage1 of dataset file ./datasets/google_message1/dataset.google_message1_proto2.pb
+Average time for parse_from_benchmark: 60590.09 ns
+Average time for serialize_to_benchmark: 39458.36 ns
+
+Message benchmarks.proto3.GoogleMessage1 of dataset file ./datasets/google_message1/dataset.google_message1_proto3.pb
+Average time for parse_from_benchmark: 60357.28 ns
+Average time for serialize_to_benchmark: 39274.85 ns
+
+Message benchmarks.google_message4.GoogleMessage4 of dataset file ./dataset.google_message4.pb
+Average time for parse_from_benchmark: 2376050.84 ns
+Average time for serialize_to_benchmark: 2091637.60 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_4.pb
+Average time for parse_from_benchmark: 20150.07 ns
+Average time for serialize_to_benchmark: 18430.99 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_3.pb
+Average time for parse_from_benchmark: 28590.39 ns
+Average time for serialize_to_benchmark: 32361.00 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_5.pb
+Average time for parse_from_benchmark: 16756.52 ns
+Average time for serialize_to_benchmark: 17513.65 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_2.pb
+Average time for parse_from_benchmark: 24409413.34 ns
+Average time for serialize_to_benchmark: 22834524.51 ns
+
+Message benchmarks.google_message3.GoogleMessage3 of dataset file ./dataset.google_message3_1.pb
+Average time for parse_from_benchmark: 13081256866.46 ns
+Average time for serialize_to_benchmark: 11141383171.08 ns
